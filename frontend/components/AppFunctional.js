@@ -6,7 +6,8 @@ export default function AppFunctional(props) {
   const [message,setMessage] = useState()
   const [step,setStep] = useState(0)
   const [email,setEmail] = useState()
-  const handleLeft = (e) => {
+
+  const handleLeft = () => {
     if(x === 1){
       setMessage("You cant' go left")
     }
@@ -17,7 +18,7 @@ export default function AppFunctional(props) {
     }
     
   }
-  const handleRight = (e) => {
+  const handleRight = () => {
    if(x === 3){
       setMessage("You can't go right")
     } else{
@@ -26,7 +27,7 @@ export default function AppFunctional(props) {
       setMessage("")
     }
   }
-  const handleUp = (e) => {
+  const handleUp = () => {
     if(y === 1){
       setMessage("You can't go up")
     } else{
@@ -35,7 +36,7 @@ export default function AppFunctional(props) {
       setMessage("")
     }
   }
-  const handleDown = (e) => {
+  const handleDown = () => {
     if(y === 3){
       setMessage("You can't go down")
     }else{
@@ -44,7 +45,7 @@ export default function AppFunctional(props) {
       setMessage("")
     }
   }
-  const handleReset = (e) => {
+  const handleReset = () => {
     setX(2)
     setY(2)
     setStep(0)
